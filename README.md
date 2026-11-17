@@ -22,9 +22,3 @@ A Java-based virtual machine that reads a plain-text assembly program and simula
   * Run the fetch-decode-execute loop using `PC`.
   * Implement `MOV`, `LOAD`, `STORE`, `JMP`, `JZ`, `JN`, `JNZ`, `PRINT`, and `HALT`.
   * Handle unknown opcodes, missing-`HALT` warnings, and formatted step-by-step console trace output.
-
-## Git Workflow
-
-1. Run `git pull` before starting any work session.
-2. Only edit the files assigned to your role.
-3. Save your changes, then run `git add .`, `git commit -m "short description"`, and `git push`.
