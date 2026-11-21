@@ -10,15 +10,15 @@ A Java-based virtual machine that reads a plain-text assembly program and simula
 
 ## Team Division of Labor
 
-* **Member 1 — Parser & Loader (`Parser.java`)**
+* **Youssef — Parser & Loader (`Parser.java`)**
   * Handle file loading and missing-file error reporting.
   * Strip `;` comments and extra whitespace; enforce case-insensitive opcodes and comma-separated operands.
   * Map labels (`label:`) to their target instruction index and record original file line numbers.
-* **Member 2 — Hardware & ALU (`Memory.java`, `Registers.java`, `ALU.java`)**
+* **Hossam — Hardware & ALU (`Memory.java`, `Registers.java`, `ALU.java`)**
   * Implement RAM (`int[256]`) and registers (`R0`–`R7`) with bounds and name validation.
   * Implement `ADD`, `SUB`, `MUL`, `DIV` (including division-by-zero checks), `AND`, `OR`, `XOR`, `NOT`, `SHL`, `SHR`, and `CMP`.
   * Manage resetting and updating the Zero (`Z`) and Negative (`N`) flags.
-* **Member 3 — Control Unit & Output (`CPU.java`, `Interpreter.java`)**
+* **Mahmoud — Control Unit & Output (`CPU.java`, `Interpreter.java`)**
   * Run the fetch-decode-execute loop using `PC`.
   * Implement `MOV`, `LOAD`, `STORE`, `JMP`, `JZ`, `JN`, `JNZ`, `PRINT`, and `HALT`.
   * Handle unknown opcodes, missing-`HALT` warnings, and formatted step-by-step console trace output.
